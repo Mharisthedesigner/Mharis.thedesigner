@@ -1,0 +1,81 @@
+/*---------------------Roots-----------------*/
+
+:root {
+    --Black: #0F0F0F;
+    --White: #ffffff;
+    --LightGrey: #D9D9D9;
+    --Paragraph: #838383;
+    --Blue: #0AA4F4;
+    --btnbackground: #131310;
+}
+
+/*---------------------Roots-----------------*/
+
+
+.logocompany {
+  position: relative;
+  z-index: 11;
+  background: var(--White);
+  margin-top: 100vh;
+}
+
+body.scrolled .logocompany {
+    transform: translateY(0);
+}
+
+
+.logocompany{
+      width: 100vw;
+  overflow: hidden;
+}
+
+/* Track */
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+  margin-top: 50px;
+}
+
+/* Logo Box */
+.logo-box {
+  width: 260px;
+  height: 130px;
+  border: 2px solid var(--LightGrey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: -1px; /* border overlap look */
+  transition: all 0.3s ease;
+}
+
+/* Image */
+.logo-box img {
+  max-width: 70%;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover Effect */
+.logo-box:hover img {
+  opacity: 1;
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-box {
+    width: 180px;
+    height: 100px;
+  }
+}

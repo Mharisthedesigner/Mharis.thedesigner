@@ -1,0 +1,198 @@
+/*---------------------Roots-----------------*/
+
+:root {
+    --Black: #0F0F0F;
+    --White: #ffffff;
+    --LightGrey: #D9D9D9;
+    --Paragraph: #838383;
+    --Blue: #0AA4F4;
+    --btnbackground: #131310;
+}
+
+/*---------------------Roots-----------------*/
+
+.testimonial-section {
+    position: relative;
+    z-index: 12;
+    background: var(--Black);
+    margin-top: 0px;
+}
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    background: var(--Black);
+    padding: 40px 0;
+}
+
+.testimonial-section .heading h1 {
+    color: var(--White);
+    text-align: center;
+}
+
+.testimonial-container {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    /* Content ke hisaab se width */
+    /* Animation: Name | Speed | Timing | Loop */
+    animation: scroll-left 50s linear infinite;
+    margin-top: 30px;
+}
+
+.testimonial-container:hover {
+    animation-play-state: paused;
+    /* Mouse lane par slider ruk jayega */
+}
+
+.stars img {
+    width: 90%;
+}
+
+/* Card Styles */
+.testimonial-card {
+    background-color: var(--btnbackground);
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 30px;
+    min-width: 450px;
+    /* Fixed width */
+    flex-shrink: 0;
+    transition: transform 0.3s ease, border-color 0.3s;
+
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.11);
+}
+
+/* Continuous Scroll Animation */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(5%);
+    }
+
+    100% {
+        transform: translateX(-80%);
+    }
+
+    /* Half width tak scroll */
+}
+
+/* Jab hum right click karein */
+.scroll-reverse {
+    animation-direction: reverse;
+}
+
+/* Header: Stars and WhatsApp icon */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.wa-icon {
+    width: 50px;
+    height: 50px;
+}
+
+/* Text Styles */
+.testimonial-text {
+    font-size: 11px;
+    line-height: 30px;
+    color: var(--White);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+}
+
+/* Footer: User Profile */
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+    color: var(--White);
+}
+
+.user-title {
+    font-size: 10px;
+    color: #888;
+    margin: 3px 0 0 0;
+    text-transform: uppercase;
+}
+
+/* Slider Buttons Style */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--White);
+    color: var(--Black);
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 15;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+}
+
+.slider-btn:hover {
+    background-color: var(--Blue);
+    color: var(--White);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .testimonial-card {
+        width: 300px;
+    }
+
+    @keyframes smoothScroll {
+        100% {
+            transform: translateX(calc(-300px * 3 - 60px));
+        }
+    }
+
+    .testimonial-text {
+        font-size: 9px;
+        line-height: 30px;
+        color: var(--White);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 30px;
+    }
+
+    .slider-btn {
+        display: none;
+    }
+
+    /* Mobile par buttons ki zaroorat nahi (swipe karein) */
+}

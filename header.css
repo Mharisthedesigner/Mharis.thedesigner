@@ -1,0 +1,469 @@
+/*---------------------Roots-----------------*/
+
+:root {
+    --Black: #0F0F0F;
+    --White: #ffffff;
+    --LightGrey: #D9D9D9;
+    --Paragraph: #838383;
+    --Blue: #0AA4F4;
+    --btnbackground: #131310;
+}
+
+/*---------------------Roots-----------------*/
+
+
+
+.header {
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    z-index: 10;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header .container img {
+    width: 260px;
+}
+
+.header .container .navbar {
+    backdrop-filter: blur(15px);
+    border: 1px solid #ffffff48;
+    background-color: rgba(0, 0, 0, 0.219);
+    border-radius: 100px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.192);
+}
+
+.header .container .navbar .data a {
+    padding: 0px 15px;
+    padding-bottom: 23px;
+    color: var(--White);
+    font-size: 14px;
+}
+
+.header .container .navbar .data {
+    padding: 25px 30px;
+    border-radius: 100px;
+}
+
+.header .container .navbar .data a:hover {
+    border-bottom: 2px solid var(--Blue);
+    color: var(--Blue);
+}
+
+.header .container button {
+    width: 220px;
+    height: 60px;
+    background-color: var(--btnbackground);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    padding-left: 15px;
+    font-size: 16px;
+    border-radius: 100px;
+    cursor: pointer;
+    color: var(--White);
+    border: 1px solid #ffffff48;
+}
+
+.header .container button i {
+    width: 45px;
+    height: 45px;
+    border-radius: 100px;
+    background-color: var(--White);
+    color: var(--Blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    transform: rotate(-40deg);
+    transition: transform 0.4s ease;
+}
+
+.header .container button:hover {
+    box-shadow: 0px 10px 30px #0aa2f47c;
+    background-color: var(--Blue);
+}
+
+/* 👇 Jab pura button hover ho to icon move kare */
+.header .container button:hover i {
+    transform: translateX(6px);
+}
+
+.header .container .navbar.activenav {
+    left: 0px;
+    transition: 1.5s all ease-in-out;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    transform-origin: 0 0;
+}
+
+.header .container .navbar #close {
+    font-size: 25px;
+    position: absolute;
+    color: var(--Black);
+    cursor: pointer;
+    z-index: 20;
+    right: 10px;
+    top: 10px;
+    background-color: var(--White);
+    padding: 20px;
+    display: none;
+    border-radius: 10px;
+}
+
+.header .container .right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header .container .right #menu {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    color: var(--Black);
+    font-size: 14px;
+    background-color: var(--White);
+    cursor: pointer;
+    margin-right: 10px;
+    display: none;
+}
+
+.header .container .right #menu:hover {
+    background-color: var(--Blue);
+}
+
+
+
+
+
+/* media quries */
+
+@media (max-width:1772px) {
+    section {
+        padding: 20px 100px;
+    }
+}
+
+@media (max-width:1674px) {
+    section {
+        padding: 20px 80px;
+    }
+
+}
+
+@media (max-width:1590px) {
+    section {
+        padding: 20px 60px;
+    }
+}
+
+@media (max-width:1486px) {
+    .header .container .navbar .data a {
+        padding: 0px 12px;
+        padding-bottom: 19px;
+        font-size: 14px;
+    }
+
+    .header .container .navbar .data {
+        padding: 20px 25px;
+    }
+
+    .header .container button {
+        width: 180px;
+        height: 55px;
+        padding: 0px 10px;
+        padding-left: 15px;
+        font-size: 13px;
+    }
+
+    .header .container button i {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+
+    .header .container img {
+        width: 200px;
+    }
+}
+
+@media (max-width:1390px) {
+    section {
+        padding: 20px 40px;
+    }
+}
+
+@media (max-width:1280px) {
+
+    html {
+        font-size: 80%;
+    }
+
+    section {
+        padding: 20px 20px;
+    }
+}
+
+@media (max-width:1080px) {
+    section {
+        padding: 20px 15px;
+    }
+
+    .header .container .navbar .data a {
+        padding: 0px 12px;
+        padding-bottom: 19px;
+        font-size: 12px;
+    }
+
+    .header .container .navbar .data {
+        padding: 20px 20px;
+    }
+
+    .header .container button {
+        width: 160px;
+        height: 55px;
+        padding: 0px 10px;
+        padding-left: 15px;
+        font-size: 12px;
+    }
+
+    .header .container button i {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+
+
+}
+
+@media (max-width:905px) {
+    .header .container .navbar .data a {
+        padding: 0px 8px;
+        padding-bottom: 19px;
+        font-size: 10px;
+    }
+
+    .header .container .navbar .data {
+        padding: 20px 20px;
+    }
+
+    .header .container button {
+        width: 140px;
+        height: 45px;
+        padding: 0px 10px;
+        padding-left: 10px;
+        font-size: 10px;
+    }
+
+    .header .container button i {
+        width: 25px;
+        height: 25px;
+        font-size: 20px;
+    }
+
+
+}
+
+@media (max-width:830px) {
+    .header {
+        backdrop-filter: blur(20px);
+    }
+
+    .header .container .navbar {
+        backdrop-filter: none;
+        border: none;
+        background-color: var(--Black);
+        border-radius: 0px;
+        box-shadow: none;
+        position: absolute;
+        left: -2000%;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        z-index: 99999;
+        transition: 1s all ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .header .container .navbar .data a {
+        font-size: 30px;
+        line-height: 130px;
+        padding-bottom: 0px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .header .container .navbar .data {
+        width: 100%;
+        margin: 10px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .header .container .navbar #close {
+        display: inherit;
+    }
+
+    .header .container .right #menu {
+        display: inherit;
+    }
+
+    .header .container button {
+        width: 160px;
+        height: 50px;
+        padding: 0px 10px;
+        padding-left: 10px;
+        font-size: 12px;
+    }
+
+    .header .container button i {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+
+}
+
+@media (max-width:780px) {
+
+    section {
+        padding: 20px 10px;
+    }
+}
+
+@media (max-width:690px) {}
+
+@media (max-width:550px) {
+    .uppericon {
+        right: 1%;
+        bottom: 20%;
+        width: 8%;
+    }
+}
+
+@media (max-width:500px) {
+    .header .container button {
+        width: 130px;
+        height: 45px;
+        padding: 0px 10px;
+        padding-left: 10px;
+        font-size: 10px;
+    }
+
+    .header .container img {
+        width: 150px;
+    }
+
+    .header .container button i {
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+    }
+
+    .header .container .right #menu {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width:450px) {
+    .uppericon {
+        right: 3%;
+        bottom: 8%;
+    }
+
+    .header .container .navbar #close {
+        font-size: 16px;
+        z-index: 20;
+        right: 10px;
+        top: 10px;
+        padding: 15px;
+    }
+
+    .header .container .navbar .data {
+        padding: 0px 10px;
+    }
+
+    .header .container .navbar .data a {
+        font-size: 30px;
+        line-height: 110px;
+        padding-bottom: 0px;
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+@media (max-width:445px) {
+    .header .container button {
+        width: 100px;
+        height: 32px;
+        padding: 0px 5px;
+        padding-left: 10px;
+        font-size: 8px;
+    }
+
+    .header .container img {
+        width: 150px;
+    }
+
+    .header .container button i {
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+    }
+
+    .header .container .right #menu {
+        width: 25px;
+        height: 25px;
+        font-size: 10px;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width:350px) {
+    .header .container button {
+        width: 100px;
+        height: 32px;
+        padding: 0px 5px;
+        padding-left: 10px;
+        font-size: 8px;
+    }
+
+    .header .container img {
+        width: 120px;
+    }
+
+    .header .container button i {
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+    }
+
+    .header .container .right #menu {
+        width: 25px;
+        height: 25px;
+        font-size: 10px;
+        margin-right: 5px;
+    }
+}
+
+/* media quries */

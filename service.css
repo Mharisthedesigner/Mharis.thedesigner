@@ -1,0 +1,457 @@
+/*---------------------Roots-----------------*/
+
+:root {
+  --Black: #0F0F0F;
+  --White: #ffffff;
+  --LightGrey: #D9D9D9;
+  --Paragraph: #838383;
+  --Blue: #0AA4F4;
+  --btnbackground: #131310;
+}
+
+/*---------------------Roots-----------------*/
+
+
+.service {
+  position: relative;
+  z-index: 12;
+  background: var(--Black);
+  margin-top: 0px;
+}
+
+.service .serviceheading {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.service .serviceheading h1 {
+  color: var(--White);
+  font-size: 60px;
+}
+
+.service .serviceheading p {
+  font-size: 16px;
+  color: var(--Paragraph);
+  line-height: 30px;
+}
+
+
+
+.services-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 150px;
+  margin-top: 100px;
+}
+
+/* LEFT */
+.service-preview {
+  padding: 30px;
+  border-radius: 14px;
+}
+
+.service-preview img {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin-bottom: 16px;
+  transition: opacity 0.3s ease;
+}
+
+.service-preview h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--White);
+}
+
+.service-preview p {
+  font-size: 12px;
+  color: var(--White);
+  line-height: 20px;
+}
+
+/* RIGHT */
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.service-item {
+  font-size: 60px;
+  font-weight: 700;
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.25);
+  transition: all 0.3s ease;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.service-item.activeservice {
+  color: var(--White);
+}
+
+
+
+@media (max-width:2600px) {
+  .service #arrowdown {
+    position: absolute;
+    top: -5%;
+    left: 50%;
+  }
+
+  .service {
+    min-height: 60vh;
+  }
+}
+
+@media (max-width:2000px) {
+  .service #arrowdown {
+    position: absolute;
+    top: -7%;
+    left: 45%;
+  }
+}
+
+
+@media (max-width:1480px) {
+  .service-item {
+    font-size: 50px;
+  }
+
+  .services-container {
+    margin-top: 80px;
+  }
+
+  .service .serviceheading h1 {
+    font-size: 50px;
+  }
+
+  .service .serviceheading p {
+    font-size: 14px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width:1280px) {
+  .service #arrowdown {
+    position: absolute;
+    top: -5%;
+    left: 47%;
+    width: 7%;
+
+  }
+
+  .service-item {
+    font-size: 40px;
+  }
+
+  .service-preview img {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 1080px) {
+
+  .service-item {
+    font-size: 35px;
+  }
+
+  .service-preview img {
+    max-width: 350px;
+  }
+
+  .service-item {
+    padding: 10px 0;
+    min-height: 100px;
+  }
+
+  .service-preview h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+  }
+
+  .service-preview p {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .service .serviceheading h1 {
+    font-size: 45px;
+  }
+
+  .service .serviceheading p {
+    font-size: 12px;
+    line-height: 30px;
+  }
+
+
+}
+
+@media (max-width: 900px) {
+
+  .service-item {
+    font-size: 30px;
+  }
+
+  .service-preview img {
+    max-width: 300px;
+  }
+
+  .service-item {
+    padding: 10px 0;
+    min-height: 70px;
+  }
+
+  .service-preview h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .service-preview p {
+    font-size: 12px;
+    line-height: 25px;
+  }
+
+  .service .serviceheading h1 {
+    font-size: 40px;
+  }
+
+  .service .serviceheading p {
+    font-size: 12px;
+    line-height: 30px;
+  }
+
+
+}
+
+@media (max-width: 840px) {
+  .services-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .service-item {
+    font-size: 30px;
+  }
+
+  .service-preview img {
+    max-width: 100%;
+  }
+
+  .service-item {
+    padding: 10px 0;
+    min-height: 50px;
+  }
+
+  .service-preview h3 {
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+
+  .service-preview p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .service .serviceheading {
+    display: block;
+    text-align: center;
+  }
+
+  .service .serviceheading h1 {
+    font-size: 50px;
+  }
+
+  .service .serviceheading p {
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 30px;
+  }
+}
+
+
+@media (max-width:870px) {
+  .service #arrowdown {
+    position: absolute;
+    top: -3.5%;
+    left: 47%;
+    width: 7%;
+
+  }
+}
+
+@media (max-width:830px) {
+  .service #arrowdown {
+    position: absolute;
+    top: -2.5%;
+    left: 46%;
+    width: 10%;
+  }
+    .services-container {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width:770px) {
+    .service #arrowdown {
+    position: absolute;
+    top: -3%;
+    left: 46%;
+  }
+}
+
+@media (max-width:660px) {
+
+  .service-item {
+    font-size: 40px;
+  }
+
+  .service-preview img {
+    max-width: 100%;
+  }
+
+  .service-item {
+    padding: 10px 0;
+    min-height: 50px;
+  }
+
+  .service-preview h3 {
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+
+  .service-preview p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .service .serviceheading h1 {
+    font-size: 40px;
+  }
+
+  .service .serviceheading p {
+    font-size: 14px;
+    line-height: 30px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width:550px) {
+
+  .service-item {
+    font-size: 30px;
+  }
+
+  .service-preview img {
+    max-width: 100%;
+  }
+
+  .service-item {
+    padding: 10px 0;
+    min-height: 20px;
+  }
+
+  .service-preview h3 {
+    font-size: 25px;
+    margin-bottom: 12px;
+  }
+
+  .service-preview p {
+    font-size: 14px;
+    line-height: 25px;
+  }
+
+  .service .serviceheading h1 {
+    font-size: 35px;
+  }
+
+  .service .serviceheading p {
+    font-size: 12px;
+    line-height: 30px;
+    margin-top: 10px;
+  }
+
+  .service .serviceheading {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width:430px) {
+  .service #arrowdown {
+    position: absolute;
+    top: -3%;
+    left: 46%;
+    width: 12%;
+  }
+
+  .service-item {
+    font-size: 25px;
+  }
+
+  .service-item {
+    padding: 10px 0;
+    min-height: 20px;
+  }
+
+  .service-preview h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .service-preview p {
+    font-size: 12px;
+    line-height: 25px;
+  }
+
+  .services-container {
+    margin-top: 30px;
+  }
+
+  .service .serviceheading h1 {
+    font-size: 30px;
+  }
+
+  .service .serviceheading p {
+    font-size: 10px;
+    line-height: 25px;
+    margin-top: 10px;
+  }
+}
+
+
+@media (max-width:350px) {
+  .service .serviceheading h1 {
+    font-size: 25px;
+  }
+
+  .service .serviceheading p {
+    font-size: 9px;
+    line-height: 20px;
+    margin-top: 10px;
+  }
+
+  .service-item {
+    font-size: 20px;
+  }
+
+  .service-item {
+    padding: 10px 0;
+    min-height: 20px;
+  }
+
+  .service-preview h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .service-preview p {
+    font-size: 10px;
+    line-height: 18px;
+  }
+}

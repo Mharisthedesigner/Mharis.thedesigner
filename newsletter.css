@@ -1,0 +1,210 @@
+/*---------------------Roots-----------------*/
+
+:root {
+    --Black: #0F0F0F;
+    --White: #ffffff;
+    --LightGrey: #D9D9D9;
+    --Paragraph: #838383;
+    --Blue: #0AA4F4;
+    --btnbackground: #131310;
+}
+
+/*---------------------Roots-----------------*/
+
+
+.cta-section {
+    position: relative;
+    z-index: 12;
+    background: var(--Black);
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.cta-card {
+    background: linear-gradient(135deg, #00b4ff 0%, #3498db 100%);
+    width: 100%;
+    max-width: 1200px;
+    padding: 80px 40px;
+    border-radius: 60px;
+    /* Large rounded corners */
+    text-align: center;
+    color: var(--White);
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.cta-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 0 0 20px 0;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.cta-description {
+    font-size: 0.95rem;
+    line-height: 30px;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    opacity: 0.9;
+}
+
+/* Button Group */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Base Button Style */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 12px 12px 25px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    margin-left: 15px;
+    font-size: 1.2rem;
+}
+
+/* White Button */
+.btn-white {
+    background: var(--White);
+    color: #333;
+}
+
+.btn-white .btn-icon {
+    background: var(--Blue);
+    color: var(--White);
+}
+
+/* Outline Button */
+.btn-outline {
+    border: 1.5px solid var(--White);
+    color: var(--White);
+}
+
+.btn-outline:hover {
+    background-color: var(--White);
+    border: none;
+    color: var(--Black);
+}
+
+.btn-outline .btn-icon {
+    background: var(--Blue);
+    color: var(--White);
+    border-radius: 100px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .cta-title {
+        font-size: 40px;
+    }
+
+    .cta-card {
+        border-radius: 30px;
+        padding: 50px 20px;
+    }
+
+    .cta-description {
+        font-size: 12px;
+        line-height: 25px;
+        max-width: 520px;
+        margin-bottom: 20px;
+    }
+
+    .cta-buttons {
+        gap: 10px;
+    }
+        .cta-card {
+        margin-top: 80px;
+            margin-bottom: 80px;
+    }
+}
+
+@media (max-width:550px) {
+        .cta-card {
+        margin-top: 50px;
+            margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 465px) {
+    .cta-title {
+        font-size: 30px;
+    }
+
+    .cta-description {
+        font-size: 10px;
+        line-height: 25px;
+        max-width: 470px;
+        margin-bottom: 20px;
+    }
+
+    .cta-buttons {
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 12px;
+    }
+
+    .cta-card {
+        margin-top: 30px;
+            margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 420px) {
+    .cta-title {
+        font-size: 25px;
+    }
+
+    .cta-description {
+        font-size: 10px;
+        line-height: 25px;
+        max-width: 470px;
+        margin-bottom: 20px;
+    }
+
+    .cta-buttons {
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 12px;
+    }
+
+    .cta-card {
+        margin-top: 30px;
+    }
+}
