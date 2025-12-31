@@ -246,12 +246,16 @@ section {
         right: 3%;
         bottom: 8%;
     }
-            #loader #logoloader {
-        width: 300px;
+        #loader #logoloader {
+        width: 350px;
     }
 
 }
 
-@media (max-width:400px) {}
+@media (max-width:400px) {
+                #loader #logoloader {
+        width: 300px;
+    }
+}
 
 /* media quries */
